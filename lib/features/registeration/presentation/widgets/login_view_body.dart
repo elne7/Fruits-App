@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/colors.dart';
+import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/custom_text_field.dart';
 

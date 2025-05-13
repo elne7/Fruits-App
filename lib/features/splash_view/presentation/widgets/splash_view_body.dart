@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/colors.dart';
+import 'package:fruits_app/core/constants/colors.dart';
 
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/colors.dart';
+import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/features/splash_view/presentation/widgets/switch_points.dart';
 
 class ThirdIntroPage extends StatelessWidget {
