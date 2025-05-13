@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/colors.dart';
+import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/otp_points_container.dart';
 
 class OtpConfirmationView extends StatelessWidget {
@@ -18,8 +19,9 @@ class OtpConfirmationView extends StatelessWidget {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const SizedBox(height: 50),
             const Text(
               'Fruit Market',
               style: TextStyle(
@@ -33,9 +35,41 @@ class OtpConfirmationView extends StatelessWidget {
               'Enter Received OTP',
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 50),
             OtpPointsContainer(),
+            const SizedBox(height: 50),
+            CustomSignInButton(
+              text: Text(
+                'Confirm',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              bgColor: kPrimaryColor,
+            ),
+            const SizedBox(height: 50),
+            const Text(
+              '60',
+              style: TextStyle(fontSize: 40, color: Colors.grey),
+            ),
             const SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text('Not Received?', style: TextStyle(fontSize: 16)),
+                const SizedBox(width: 10),
+                const Text(
+                  'Sind Again',
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.blue,
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
