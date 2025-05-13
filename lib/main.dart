@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/registeration/presentation/views/otp_confirmation_view.dart';
+import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
+// import 'package:fruits_app/features/registeration/presentation/views/otp_confirmation_view.dart';
 // import 'package:fruits_app/features/registeration/presentation/views/sign_up_view.dart';
 // import 'package:fruits_app/features/registeration/presentation/widgets/data_sign_in_view_body.dart';
 // import 'package:fruits_app/features/registeration/presentation/widgets/login_view_body.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const OtpConfirmationView(),
+      home: const HomeViewBody(),
     );
   }
 }
