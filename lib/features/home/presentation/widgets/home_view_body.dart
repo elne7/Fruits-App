@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
 import 'package:fruits_app/features/home/presentation/widgets/offers_page_view.dart';
+import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
 import 'package:fruits_app/features/splash_view/presentation/widgets/switch_points.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -45,6 +46,47 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           SwitchPoints(currentIndex: 1),
           const SizedBox(height: 10),
           CustomCategoriesList(),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 20),
+                child: Text(
+                  'Sellers',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: kPrimaryColor,
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {},
+                child: const Text(
+                  'Show All',
+                  style: TextStyle(
+                    fontSize: 18,
+                    // fontWeight: FontWeight.bold,
+                    color: kPrimaryColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Expanded(
+            child: ListView.builder(
+              itemCount: 3,
+              // scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return const Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: SellerItem(),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

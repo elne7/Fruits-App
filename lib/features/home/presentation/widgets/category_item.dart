@@ -18,7 +18,7 @@ class CategoryItem extends StatelessWidget {
             color: Colors.grey.withAlpha(80),
             spreadRadius: 1,
             blurRadius: 5,
-            offset: const Offset(0, 3), // changes position of shadow
+            offset: const Offset(0, 3),
           ),
         ],
       ),
