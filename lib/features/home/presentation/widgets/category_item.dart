@@ -22,10 +22,11 @@ class CategoryItem extends StatelessWidget {
           ),
         ],
       ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
-        child: Image.asset(image),
-      ),
+      child: Image.asset(image),
+      // ClipRRect(
+      //   borderRadius: BorderRadius.circular(16),
+      //   child: Image.asset(image),
+      // ),
     );
   }
 }
