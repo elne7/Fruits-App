@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
+import 'package:fruits_app/features/home/presentation/widgets/filter_drop_down_menu.dart';
 import 'package:fruits_app/features/home/presentation/widgets/offers_page_view.dart';
+import 'package:fruits_app/features/home/presentation/widgets/radio_buttons_section.dart';
 import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
+import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
 import 'package:fruits_app/features/splash_view/presentation/widgets/switch_points.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -33,7 +36,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           // const SizedBox(width: 10),
           IconButton(
             icon: const Icon(Icons.menu, color: kPrimaryColor, size: 40),
-            onPressed: () {},
+            onPressed: () {
+              _filterdialogBuilder(context);
+            },
           ),
         ],
       ),
@@ -91,4 +96,78 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       ),
     );
   }
+}
+
+Future<void> _filterdialogBuilder(BuildContext context) {
+  return showDialog<void>(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        backgroundColor: Colors.white,
+        title: Center(
+          child: const Text(
+            'Filter by',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          ),
+        ),
+        contentPadding: const EdgeInsets.all(20),
+        content: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Text(
+                  'Deliverd to ',
+                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                ),
+                const SizedBox(width: 10),
+                const Icon(Icons.delivery_dining_sharp, color: Colors.grey),
+              ],
+            ),
+            const SizedBox(height: 10),
+            FilterDropDownMenu(),
+            const SizedBox(height: 10),
+            RadioButtonsSection(),
+            const SizedBox(height: 10),
+          ],
+        ),
+        actions: <Widget>[
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CustomSignInButton(
+                text: Text(
+                  'Apply Filter',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                bgColor: kPrimaryColor,
+              ),
+              TextButton(
+                // style: TextButton.styleFrom(
+                //   textStyle: Theme.of(context).textTheme.labelLarge,
+                // ),
+                child: Text(
+                  'Close',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.grey[600],
+                    // fontWeight: FontWeight.bold,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          ),
+        ],
+      );
+    },
+  );
 }
