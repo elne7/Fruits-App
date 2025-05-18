@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/core/constants/colors.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({
-    super.key,
-    required this.hintText,
-    required this.title,
-  });
+  const CustomTextField({super.key, this.hintText, required this.title});
 
   final String title;
-  final String hintText;
+  final String? hintText;
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +14,13 @@ class CustomTextField extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            '$title *',
-            style: TextStyle(
-              color: Colors.grey,
-              // fontSize: 16,
-            ),
-          ),
+          Text(title, style: TextStyle(color: Colors.grey, fontSize: 16)),
           const SizedBox(height: 7),
           Container(
-            height: 40,
+            height: 50,
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(32),
+              borderRadius: BorderRadius.circular(24),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withAlpha(80),
@@ -40,15 +31,20 @@ class CustomTextField extends StatelessWidget {
               ],
             ),
             child: TextFormField(
+              cursorColor: kPrimaryColor,
               decoration: InputDecoration(
-                hintText: hintText,
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
+                hintText: hintText ?? '',
+                // border: OutlineInputBorder(
+                //   borderRadius: BorderRadius.circular(32),
+                //   borderSide: BorderSide(color: Colors.grey),
+                // ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(24),
                   borderSide: BorderSide(color: Colors.grey),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
-                  borderSide: BorderSide(color: Colors.blue),
+                  borderRadius: BorderRadius.circular(24),
+                  borderSide: BorderSide(color: kPrimaryColor),
                 ),
               ),
               onChanged: (value) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/terms&conditions/terms_view.dart';
+import 'package:fruits_app/features/contact_us/presentation/views/contact_us_view.dart';
+// import 'package:fruits_app/features/terms&conditions/terms_view.dart';
 // import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
 // import 'package:fruits_app/features/registeration/presentation/views/otp_confirmation_view.dart';
 // import 'package:fruits_app/features/registeration/presentation/views/sign_up_view.dart';
@@ -19,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Fruits App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const TermsView(),
+      home: const ContactUsView(),
     );
   }
 }
