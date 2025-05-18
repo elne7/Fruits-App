@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
-import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
+import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/custom_text_field.dart';
 
 class DataSignInViewBody extends StatelessWidget {
@@ -40,17 +40,7 @@ class DataSignInViewBody extends StatelessWidget {
             const SizedBox(height: 20),
             CustomTextField(title: 'Password', hintText: 'Password'),
             const SizedBox(height: 20),
-            CustomSignInButton(
-              text: Text(
-                'Sign Up',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              bgColor: kPrimaryColor,
-            ),
+            CustomNoIconButton(text: 'Sign Up', bgColor: 'green'),
             const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

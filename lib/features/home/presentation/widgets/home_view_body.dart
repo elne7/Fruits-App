@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
 import 'package:fruits_app/features/home/presentation/widgets/filter_drop_down_menu.dart';
 import 'package:fruits_app/features/home/presentation/widgets/offers_page_view.dart';
 import 'package:fruits_app/features/home/presentation/widgets/radio_buttons_section.dart';
 import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
-import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
 import 'package:fruits_app/features/splash_view/presentation/widgets/switch_points.dart';
 
 class HomeViewBody extends StatefulWidget {
@@ -137,28 +137,11 @@ Future<void> _filterdialogBuilder(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              CustomSignInButton(
-                text: Text(
-                  'Apply Filter',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                bgColor: kPrimaryColor,
-              ),
+              CustomNoIconButton(text: 'Apply', bgColor: 'green'),
               TextButton(
-                // style: TextButton.styleFrom(
-                //   textStyle: Theme.of(context).textTheme.labelLarge,
-                // ),
                 child: Text(
                   'Close',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.grey[600],
-                    // fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, color: Colors.grey[600]),
                 ),
                 onPressed: () {
                   Navigator.of(context).pop();

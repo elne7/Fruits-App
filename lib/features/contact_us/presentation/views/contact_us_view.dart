@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
-import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
+import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/custom_text_field.dart';
 
 class ContactUsView extends StatelessWidget {
@@ -41,17 +41,7 @@ class ContactUsView extends StatelessWidget {
             const SizedBox(height: 20),
             CustomTextField(title: 'Message'),
             const SizedBox(height: 20),
-            CustomSignInButton(
-              text: Text(
-                'Submit',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              bgColor: kPrimaryColor,
-            ),
+            CustomNoIconButton(text: 'Submit', bgColor: 'green'),
           ],
         ),
       ),

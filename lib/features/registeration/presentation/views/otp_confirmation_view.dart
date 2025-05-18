@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
-import 'package:fruits_app/features/registeration/presentation/widgets/custom_sign_in_button.dart';
+import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/otp_points_container.dart';
 
 class OtpConfirmationView extends StatelessWidget {
@@ -38,16 +38,9 @@ class OtpConfirmationView extends StatelessWidget {
             const SizedBox(height: 50),
             OtpPointsContainer(),
             const SizedBox(height: 50),
-            CustomSignInButton(
-              text: Text(
-                'Confirm',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
-              ),
-              bgColor: kPrimaryColor,
+            CustomNoIconButton(
+              text: 'Confirm',
+              bgColor: 'green',
             ),
             const SizedBox(height: 50),
             const Text(
