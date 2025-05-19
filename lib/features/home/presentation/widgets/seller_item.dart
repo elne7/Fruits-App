@@ -18,7 +18,7 @@ class SellerItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 10),
               child: const CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage('assets/imgs/Offer.png'),
+                backgroundImage: AssetImage('assets/imgs/company_logo.png'),
               ),
             ),
             const SizedBox(width: 10),

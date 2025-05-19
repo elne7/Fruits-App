@@ -16,7 +16,7 @@ class _CustomCategoriesListState extends State<CustomCategoriesList> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CategoryItem(image: 'assets/imgs/categories/Resturant.png'),
+          CategoryItem(image: 'assets/imgs/categories/Restorant.png'),
           CategoryItem(image: 'assets/imgs/categories/Farm.png'),
           CategoryItem(image: 'assets/imgs/categories/Coffe.png'),
           CategoryItem(image: 'assets/imgs/categories/Pharmacy.png'),
