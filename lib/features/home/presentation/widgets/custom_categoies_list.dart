@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/features/home/presentation/widgets/category_item.dart';
 
-class CustomCategoriesList extends StatefulWidget {
-  const CustomCategoriesList({super.key});
+class CustomCategoriesList extends StatelessWidget {
+  const CustomCategoriesList({super.key, required this.categories, this.titles});
 
-  @override
-  State<CustomCategoriesList> createState() => _CustomCategoriesListState();
-}
+  final List<String> categories;
+  final List<String>? titles;
 
-class _CustomCategoriesListState extends State<CustomCategoriesList> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,10 +14,10 @@ class _CustomCategoriesListState extends State<CustomCategoriesList> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CategoryItem(image: 'assets/imgs/categories/Restorant.png'),
-          CategoryItem(image: 'assets/imgs/categories/Farm.png'),
-          CategoryItem(image: 'assets/imgs/categories/Coffe.png'),
-          CategoryItem(image: 'assets/imgs/categories/Pharmacy.png'),
+          CategoryItem(image: categories[0], title: titles != null ? titles![0] : null),
+          CategoryItem(image: categories[1], title: titles != null ? titles![1] : null),
+          CategoryItem(image: categories[2], title: titles != null ? titles![2] : null),
+          CategoryItem(image: categories[3], title: titles != null ? titles![3] : null),
         ],
       ),
     );

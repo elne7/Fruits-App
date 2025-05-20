@@ -52,7 +52,14 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           const SizedBox(height: 10),
           SwitchPoints(currentIndex: 1),
           const SizedBox(height: 10),
-          CustomCategoriesList(),
+          CustomCategoriesList(
+            categories: [
+              'assets/imgs/categories/Restorant.png',
+              'assets/imgs/categories/Farm.png',
+              'assets/imgs/categories/Coffe.png',
+              'assets/imgs/categories/Pharmacy.png',
+            ],
+          ),
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

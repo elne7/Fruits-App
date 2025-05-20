@@ -7,21 +7,19 @@ class SellerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-      elevation: 4,
-      child: Container(
-        height: 100,
-        width: 100,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+      color: Colors.white,
+      elevation: 3,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10.0),
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 16),
               child: const CircleAvatar(
                 radius: 30,
                 backgroundImage: AssetImage('assets/imgs/company_logo.png'),
               ),
             ),
-            const SizedBox(width: 10),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +68,7 @@ class SellerItem extends StatelessWidget {
                     '4.5',
                     style: TextStyle(fontSize: 18, color: Colors.grey),
                   ),
-                  const SizedBox(height: 5),
+                  const SizedBox(height: 30),
                   Row(
                     children: [
                       const Text(

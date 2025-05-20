@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
+import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
+import 'package:fruits_app/features/seller_view/presentation/widgets/product_item.dart';
 
 class SellerViewBody extends StatefulWidget {
   const SellerViewBody({super.key});
@@ -23,7 +26,7 @@ class _SellerViewBodyState extends State<SellerViewBody> {
         ),
         centerTitle: true,
         shape: Border(
-          bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
+          bottom: BorderSide(color: Colors.grey.withAlpha(50), width: 1.0),
         ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded, size: 40),
@@ -38,10 +41,49 @@ class _SellerViewBodyState extends State<SellerViewBody> {
           ),
         ],
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[Text('Seller View Body')],
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SellerItem(),
+            const SizedBox(height: 5),
+            const Text(
+              'Categories',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 5),
+            CustomCategoriesList(
+              categories: [
+                'assets/imgs/fruits.png',
+                'assets/imgs/vegetables.png',
+                'assets/imgs/iphone.png',
+                'assets/imgs/pet.png',
+              ],
+              titles: ['Fruits', 'Vegetables', 'Phones', 'Pets'],
+            ),
+            const SizedBox(height: 10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Products',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.filter_list, size: 24),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+            const SizedBox(height: 5),
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: 2,
+              itemBuilder: (context, index) => const ProductItem(),
+            ),
+          ],
         ),
       ),
     );
