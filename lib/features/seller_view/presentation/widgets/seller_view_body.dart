@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/core/widgets/app_bar_title.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
 import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
 import 'package:fruits_app/features/seller_view/presentation/widgets/product_item.dart';
@@ -16,14 +16,7 @@ class _SellerViewBodyState extends State<SellerViewBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Fruit Market',
-          style: TextStyle(
-            color: kPrimaryColor,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: AppBarTitle(),
         centerTitle: true,
         shape: Border(
           bottom: BorderSide(color: Colors.grey.withAlpha(50), width: 1.0),

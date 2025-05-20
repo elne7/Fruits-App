@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
+import 'package:fruits_app/features/product/presentation/widgets/product_view_body.dart';
 // import 'package:fruits_app/features/favorite/presentation/widgets/favorites_view_body.dart';
 // import 'package:fruits_app/features/contact_us/presentation/views/contact_us_view.dart';
 // import 'package:fruits_app/features/terms&conditions/terms_view.dart';
 // import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
-import 'package:fruits_app/features/seller_view/presentation/widgets/seller_view_body.dart';
+// import 'package:fruits_app/features/seller_view/presentation/widgets/seller_view_body.dart';
 // import 'package:fruits_app/features/registeration/presentation/views/otp_confirmation_view.dart';
 // import 'package:fruits_app/features/registeration/presentation/views/sign_up_view.dart';
 // import 'package:fruits_app/features/registeration/presentation/widgets/data_sign_in_view_body.dart';
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const SellerViewBody(),
+      home: const HomeViewBody(),
     );
   }
 }

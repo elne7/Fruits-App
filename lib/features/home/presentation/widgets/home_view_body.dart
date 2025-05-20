@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/core/widgets/app_bar_title.dart';
 import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
 import 'package:fruits_app/features/home/presentation/widgets/filter_drop_down_menu.dart';
@@ -20,14 +21,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'Fruit Market',
-          style: TextStyle(
-            color: kPrimaryColor,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: AppBarTitle(),
         shape: Border(
           bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
         ),
@@ -123,6 +117,7 @@ Future<void> _filterdialogBuilder(BuildContext context) {
         content: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Row(
               children: [
@@ -138,7 +133,6 @@ Future<void> _filterdialogBuilder(BuildContext context) {
             FilterDropDownMenu(),
             const SizedBox(height: 10),
             RadioButtonsSection(),
-            const SizedBox(height: 10),
           ],
         ),
         actions: <Widget>[

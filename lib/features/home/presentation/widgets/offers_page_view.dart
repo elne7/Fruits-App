@@ -14,7 +14,7 @@ class OffersPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 120,
+      height: 150,
       child: PageView.builder(
         itemCount: images.length,
         itemBuilder: (context, index) {
