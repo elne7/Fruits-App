@@ -19,6 +19,9 @@ class ContactUsView extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        shape: Border(
+          bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_ios_new_rounded),
           onPressed: () {
@@ -33,7 +36,6 @@ class ContactUsView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Divider(color: Colors.grey, thickness: 2),
             const SizedBox(height: 20),
             CustomTextField(title: 'Name'),
             const SizedBox(height: 20),

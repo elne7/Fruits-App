@@ -7,11 +7,16 @@ class FavoritesViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Favorites'), centerTitle: true),
+      appBar: AppBar(
+        title: const Text('Favorites'),
+        centerTitle: true,
+        shape: Border(
+          bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
+        ),
+      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Divider(color: Colors.grey, thickness: 2),
           const SizedBox(height: 5),
           ListView.builder(
             shrinkWrap: true,

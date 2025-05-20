@@ -17,6 +17,9 @@ class TermsView extends StatelessWidget {
           ),
         ),
         centerTitle: true,
+        shape: Border(
+          bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
+        ),
         leading: IconButton(
           icon: const Icon(
             Icons.arrow_back_ios_new_rounded,
@@ -32,7 +35,6 @@ class TermsView extends StatelessWidget {
       body: SingleChildScrollView(
         child: Wrap(
           children: [
-            Divider(color: Colors.grey, thickness: 2),
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: const Text(

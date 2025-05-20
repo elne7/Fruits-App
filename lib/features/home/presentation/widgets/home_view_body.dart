@@ -28,6 +28,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
             fontWeight: FontWeight.bold,
           ),
         ),
+        shape: Border(
+          bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 1.0),
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.search, color: kPrimaryColor, size: 40),
@@ -44,7 +47,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       ),
       body: Column(
         children: [
-          const Divider(color: Colors.grey, thickness: 2),
           const SizedBox(height: 10),
           OffersPageView(),
           const SizedBox(height: 10),
