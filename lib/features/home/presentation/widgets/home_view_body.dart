@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/core/widgets/app_bar_title.dart';
 import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
@@ -32,7 +33,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           ),
           // const SizedBox(width: 10),
           IconButton(
-            icon: const Icon(Icons.menu, color: kPrimaryColor, size: 40),
+            icon: const FaIcon(FontAwesomeIcons.sliders, color: kPrimaryColor, size: 40),
             onPressed: () {
               _filterdialogBuilder(context);
             },

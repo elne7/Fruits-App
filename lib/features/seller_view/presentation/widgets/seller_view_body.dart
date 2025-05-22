@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fruits_app/core/widgets/app_bar_title.dart';
 import 'package:fruits_app/features/home/presentation/widgets/custom_categoies_list.dart';
 import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
@@ -65,7 +66,7 @@ class _SellerViewBodyState extends State<SellerViewBody> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.filter_list, size: 24),
+                  icon: const FaIcon(FontAwesomeIcons.arrowDownShortWide, size: 24),
                   onPressed: () {},
                 ),
               ],

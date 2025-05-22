@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar({super.key});
@@ -32,11 +33,11 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           label: 'Home',
         ),
         NavigationDestination(
-          icon: Badge(child: Icon(Icons.notifications_sharp)),
+          icon: Badge(child: FaIcon(FontAwesomeIcons.listUl)),
           label: 'Orders',
         ),
         NavigationDestination(
-          icon: Badge(child: Icon(Icons.shopping_basket)),
+          icon: Badge(child: FaIcon(FontAwesomeIcons.basketShopping)),
           label: 'Bastket',
         ),
         NavigationDestination(
@@ -44,7 +45,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
           label: 'Favorites',
         ),
         NavigationDestination(
-          icon: Badge(child: Icon(Icons.more_horiz)),
+          icon: Badge(child: FaIcon(FontAwesomeIcons.alignLeft)),
           label: 'More',
         ),
       ],
