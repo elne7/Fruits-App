@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
+import 'package:fruits_app/core/layout/custom_navigation_bar.dart';
+// import 'package:fruits_app/features/home/presentation/widgets/home_view_body.dart';
 // import 'package:fruits_app/features/product/presentation/widgets/product_view_body.dart';
 // import 'package:fruits_app/features/favorite/presentation/widgets/favorites_view_body.dart';
 // import 'package:fruits_app/features/contact_us/presentation/views/contact_us_view.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const HomeViewBody(),
+      home: const CustomNavigationBar(),
     );
   }
 }

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/features/favorite/presentation/views/favorite_view.dart';
+import 'package:fruits_app/features/home/presentation/views/home_view.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:line_icons/line_icons.dart';
 
 class CustomNavigationBar extends StatefulWidget {
   const CustomNavigationBar({super.key});
@@ -9,46 +13,84 @@ class CustomNavigationBar extends StatefulWidget {
 }
 
 class _CustomNavigationBarState extends State<CustomNavigationBar> {
-  int selectedIndex = 0;
+  int _selectedIndex = 0;
+  final screens = const [
+    HomeView(),
+    // OrdersView(),
+    // BasketView(),
+    FavoriteView(),
+    // MoreView(),
+  ];
+
+  int index = 1;
+  final PageController _pageController = PageController(initialPage: 0);
+
   void onItemTapped(int index) {
     setState(() {
-      selectedIndex = index;
+      _selectedIndex = index;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(
-      onDestinationSelected: (int index) {
-        setState(() {
-          selectedIndex = index;
-        });
-      },
-      indicatorColor: Colors.amber,
-      selectedIndex: selectedIndex,
-      destinations: const <Widget>[
-        NavigationDestination(
-          selectedIcon: Icon(Icons.home),
-          icon: Icon(Icons.home_outlined),
-          label: 'Home',
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: PageView(
+        controller: _pageController,
+        children: screens,
+        onPageChanged: (pageIndex) {
+          setState(() {
+            index = pageIndex;
+          });
+        },
+      ),
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: kPrimaryColor,
+          boxShadow: [
+            BoxShadow(blurRadius: 20, color: Colors.black.withAlpha(10)),
+          ],
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20),
+            topRight: Radius.circular(20),
+          ),
         ),
-        NavigationDestination(
-          icon: Badge(child: FaIcon(FontAwesomeIcons.listUl)),
-          label: 'Orders',
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+            child: GNav(
+              rippleColor: Colors.grey[300]!,
+              hoverColor: Colors.grey[100]!,
+              gap: 8,
+              activeColor: Colors.black,
+              iconSize: 24,
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              duration: Duration(milliseconds: 400),
+              tabBackgroundColor: Colors.white,
+              color: Colors.white,
+              tabs: [
+                customGButton('Home', LineIcons.home),
+                customGButton('Orders', LineIcons.listUl),
+                customGButton('Basket', LineIcons.shoppingBasket),
+                customGButton('Favorites', LineIcons.heart),
+                customGButton('More', LineIcons.alignLeft),
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: onItemTapped,
+            ),
+          ),
         ),
-        NavigationDestination(
-          icon: Badge(child: FaIcon(FontAwesomeIcons.basketShopping)),
-          label: 'Bastket',
-        ),
-        NavigationDestination(
-          icon: Badge(child: Icon(Icons.favorite_border)),
-          label: 'Favorites',
-        ),
-        NavigationDestination(
-          icon: Badge(child: FaIcon(FontAwesomeIcons.alignLeft)),
-          label: 'More',
-        ),
-      ],
+      ),
+    );
+  }
+
+  GButton customGButton(String text, IconData icon) {
+    return GButton(
+      icon: icon,
+      iconActiveColor: kPrimaryColor,
+      text: text,
+      textColor: kPrimaryColor,
+      textStyle: TextStyle(fontWeight: FontWeight.bold, color: kPrimaryColor),
     );
   }
 }
