@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/core/widgets/app_bar_title.dart';
+import 'package:fruits_app/features/product/presentation/widgets/add_to_cart_button.dart';
+import 'package:fruits_app/features/product/presentation/widgets/product_expansion_tile_list.dart';
 import 'package:fruits_app/features/product/presentation/widgets/product_img.dart';
 
 class ProductViewBody extends StatefulWidget {
@@ -44,7 +46,7 @@ class _ProductViewBodyState extends State<ProductViewBody> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             ProductImg(),
@@ -121,14 +123,11 @@ class _ProductViewBodyState extends State<ProductViewBody> {
               style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
             const SizedBox(height: 10),
+            ProductExpansionTileList(),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: kPrimaryColor,
-        child: const Icon(Icons.shopping_basket_rounded),
-      ),
+      floatingActionButton: AddToCartButton(),
     );
   }
 }
