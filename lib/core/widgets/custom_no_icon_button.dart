@@ -9,7 +9,7 @@ class CustomNoIconButton extends StatelessWidget {
   });
 
   final String text;
-  final String bgColor;
+  final String? bgColor;
 
   @override
   Widget build(BuildContext context) {
