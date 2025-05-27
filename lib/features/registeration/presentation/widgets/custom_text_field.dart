@@ -34,13 +34,9 @@ class CustomTextField extends StatelessWidget {
               cursorColor: kPrimaryColor,
               decoration: InputDecoration(
                 hintText: hintText ?? '',
-                // border: OutlineInputBorder(
-                //   borderRadius: BorderRadius.circular(32),
-                //   borderSide: BorderSide(color: Colors.grey),
-                // ),
-                enabledBorder: OutlineInputBorder(
+                border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24),
-                  borderSide: BorderSide(color: Colors.grey),
+                  borderSide: BorderSide.none,
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(24),

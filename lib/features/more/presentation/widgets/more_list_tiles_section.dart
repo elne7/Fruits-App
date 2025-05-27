@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/features/more/presentation/widgets/language/select_lang_dialoge.dart';
 import 'package:fruits_app/features/more/presentation/widgets/more_list_tile_item.dart';
+import 'package:fruits_app/features/terms&conditions/terms_view.dart';
 
 class MoreListTilesSection extends StatelessWidget {
   const MoreListTilesSection({super.key});
@@ -31,7 +32,16 @@ class MoreListTilesSection extends StatelessWidget {
             },
           ),
           MoreListTileItem(icon: Icons.headset_outlined, title: 'Support'),
-          MoreListTileItem(icon: Icons.handshake, title: 'Terms & Conditions'),
+          MoreListTileItem(
+            icon: Icons.handshake,
+            title: 'Terms & Conditions',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TermsView()),
+              );
+            },
+          ),
           MoreListTileItem(icon: Icons.info_outline_rounded, title: 'About Us'),
         ],
       ),
