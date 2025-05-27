@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/product/presentation/widgets/product_view_body.dart';
+import 'package:fruits_app/features/basket/presentation/widgets/basket_view_body.dart';
+// import 'package:fruits_app/features/product/presentation/widgets/product_view_body.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ProductViewBody(),
+      home: const BasketViewBody(),
     );
   }
 }
