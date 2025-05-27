@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/features/more/presentation/widgets/more_view_body.dart';
+import 'package:fruits_app/features/order/presentation/widgets/order_view_body.dart';
 // import 'package:fruits_app/features/more/presentation/views/profile_view.dart';
 // import 'package:fruits_app/features/basket/presentation/widgets/basket_view_body.dart';
 // import 'package:fruits_app/features/product/presentation/widgets/product_view_body.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MoreViewBody(),
+      home: const OrderViewBody(),
     );
   }
 }
