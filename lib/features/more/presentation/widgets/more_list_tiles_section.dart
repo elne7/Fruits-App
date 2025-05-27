@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/features/contact_us/presentation/views/contact_us_view.dart';
+import 'package:fruits_app/features/favorite/presentation/views/favorite_view.dart';
+import 'package:fruits_app/features/more/presentation/views/about_us_view.dart';
+import 'package:fruits_app/features/more/presentation/views/profile_view.dart';
 import 'package:fruits_app/features/more/presentation/widgets/language/select_lang_dialoge.dart';
 import 'package:fruits_app/features/more/presentation/widgets/more_list_tile_item.dart';
 import 'package:fruits_app/features/terms&conditions/terms_view.dart';
@@ -15,6 +19,12 @@ class MoreListTilesSection extends StatelessWidget {
           MoreListTileItem(
             icon: Icons.person_outline_rounded,
             title: 'Profile',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ProfileView()),
+              );
+            },
           ),
           MoreListTileItem(
             icon: Icons.format_list_numbered_rounded,
@@ -23,6 +33,12 @@ class MoreListTilesSection extends StatelessWidget {
           MoreListTileItem(
             icon: Icons.favorite_outline_rounded,
             title: 'Favorites',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FavoriteView()),
+              );
+            },
           ),
           MoreListTileItem(
             icon: Icons.language,
@@ -31,7 +47,16 @@ class MoreListTilesSection extends StatelessWidget {
               langDialogBuilder(context);
             },
           ),
-          MoreListTileItem(icon: Icons.headset_outlined, title: 'Support'),
+          MoreListTileItem(
+            icon: Icons.headset_outlined,
+            title: 'Support',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const ContactUsView()),
+              );
+            },
+          ),
           MoreListTileItem(
             icon: Icons.handshake,
             title: 'Terms & Conditions',
@@ -42,7 +67,16 @@ class MoreListTilesSection extends StatelessWidget {
               );
             },
           ),
-          MoreListTileItem(icon: Icons.info_outline_rounded, title: 'About Us'),
+          MoreListTileItem(
+            icon: Icons.info_outline_rounded,
+            title: 'About Us',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AboutUsView()),
+              );
+            },
+          ),
         ],
       ),
     );
