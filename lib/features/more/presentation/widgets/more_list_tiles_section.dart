@@ -5,6 +5,7 @@ import 'package:fruits_app/features/more/presentation/views/about_us_view.dart';
 import 'package:fruits_app/features/more/presentation/views/profile_view.dart';
 import 'package:fruits_app/features/more/presentation/widgets/language/select_lang_dialoge.dart';
 import 'package:fruits_app/features/more/presentation/widgets/more_list_tile_item.dart';
+import 'package:fruits_app/features/order/presentation/views/order_view.dart';
 import 'package:fruits_app/features/terms&conditions/terms_view.dart';
 
 class MoreListTilesSection extends StatelessWidget {
@@ -29,6 +30,12 @@ class MoreListTilesSection extends StatelessWidget {
           MoreListTileItem(
             icon: Icons.format_list_numbered_rounded,
             title: 'My Orders',
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const OrderView()),
+              );
+            },
           ),
           MoreListTileItem(
             icon: Icons.favorite_outline_rounded,

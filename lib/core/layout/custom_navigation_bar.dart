@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
+import 'package:fruits_app/features/basket/presentation/views/basket_view.dart';
 import 'package:fruits_app/features/favorite/presentation/views/favorite_view.dart';
 import 'package:fruits_app/features/home/presentation/views/home_view.dart';
+import 'package:fruits_app/features/more/presentation/views/more_view.dart';
+import 'package:fruits_app/features/order/presentation/views/order_view.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
@@ -16,18 +19,19 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
   int _selectedIndex = 0;
   final screens = const [
     HomeView(),
-    // OrdersView(),
-    // BasketView(),
+    OrderView(),
+    BasketView(),
     FavoriteView(),
-    // MoreView(),
+    MoreView(),
   ];
 
-  int index = 1;
+  // int index = 1;
   final PageController _pageController = PageController(initialPage: 0);
 
   void onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+      _pageController.jumpToPage(index);
     });
   }
 
@@ -40,7 +44,7 @@ class _CustomNavigationBarState extends State<CustomNavigationBar> {
         children: screens,
         onPageChanged: (pageIndex) {
           setState(() {
-            index = pageIndex;
+            _selectedIndex = pageIndex;
           });
         },
       ),
