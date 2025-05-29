@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/contact_us/presentation/views/contact_us_view.dart';
+import 'package:fruits_app/features/more/presentation/views/contact_us_view.dart';
 import 'package:fruits_app/features/favorite/presentation/views/favorite_view.dart';
 import 'package:fruits_app/features/more/presentation/views/about_us_view.dart';
 import 'package:fruits_app/features/more/presentation/views/profile_view.dart';
 import 'package:fruits_app/features/more/presentation/widgets/language/select_lang_dialoge.dart';
 import 'package:fruits_app/features/more/presentation/widgets/more_list_tile_item.dart';
 import 'package:fruits_app/features/order/presentation/views/order_view.dart';
-import 'package:fruits_app/features/terms&conditions/terms_view.dart';
+import 'package:fruits_app/features/more/presentation/views/terms_view.dart';
 
 class MoreListTilesSection extends StatelessWidget {
   const MoreListTilesSection({super.key});

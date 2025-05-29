@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/contact_us/presentation/widgets/custom_refrence_icon.dart';
+import 'package:fruits_app/features/more/presentation/widgets/contact_us/custom_refrence_icon.dart';
 
 class RefrenceIconsContainer extends StatelessWidget {
   RefrenceIconsContainer({super.key});

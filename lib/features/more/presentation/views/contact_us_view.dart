@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
 import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
-import 'package:fruits_app/features/contact_us/presentation/widgets/contact_us_text_field.dart';
-import 'package:fruits_app/features/contact_us/presentation/widgets/refrence_icons_container.dart';
+import 'package:fruits_app/features/more/presentation/widgets/contact_us/contact_us_text_field.dart';
+import 'package:fruits_app/features/more/presentation/widgets/contact_us/refrence_icons_container.dart';
 
 class ContactUsView extends StatelessWidget {
   const ContactUsView({super.key});

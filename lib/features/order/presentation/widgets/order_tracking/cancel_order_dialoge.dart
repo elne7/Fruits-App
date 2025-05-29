@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
-import 'package:fruits_app/features/contact_us/presentation/widgets/contact_us_text_field.dart';
+import 'package:fruits_app/features/more/presentation/widgets/contact_us/contact_us_text_field.dart';
 import 'package:fruits_app/features/registeration/presentation/widgets/custom_text_field.dart';
 
 Future<void> cancelOrderDialogBuilder(BuildContext context) {
