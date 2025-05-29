@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/layout/custom_navigation_bar.dart';
+import 'package:fruits_app/features/order/presentation/widgets/order_tracking/order_tracking_view_body.dart';
+// import 'package:fruits_app/core/layout/custom_navigation_bar.dart';
 // import 'package:fruits_app/features/more/presentation/widgets/more_view_body.dart';
 // import 'package:fruits_app/features/order/presentation/widgets/order_view_body.dart';
 // import 'package:fruits_app/features/more/presentation/views/profile_view.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const CustomNavigationBar(),
+      home: const OrderTrackingViewBody(),
     );
   }
 }

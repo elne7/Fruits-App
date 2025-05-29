@@ -6,40 +6,45 @@ class CustomNoIconButton extends StatelessWidget {
     super.key,
     required this.text,
     required this.bgColor,
+    this.onTap,
   });
 
   final String text;
   final String? bgColor;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: MediaQuery.of(context).size.width * 0.8,
-      decoration: BoxDecoration(
-        color:
-            bgColor == 'red'
-                ? kRedColor
-                : bgColor == 'green'
-                ? kPrimaryColor
-                : Colors.white,
-        borderRadius: BorderRadius.circular(24),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withAlpha(50),
-            blurRadius: 5,
-            offset: const Offset(0, 3),
-          ),
-        ],
-      ),
-      child: Center(
-        child: Text(
-          text,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: bgColor == 'white' ? kPrimaryColor : Colors.white,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 50,
+        width: MediaQuery.of(context).size.width * 0.8,
+        decoration: BoxDecoration(
+          color:
+              bgColor == 'red'
+                  ? kRedColor
+                  : bgColor == 'green'
+                  ? kPrimaryColor
+                  : Colors.white,
+          borderRadius: BorderRadius.circular(24),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withAlpha(50),
+              blurRadius: 5,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Center(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: bgColor == 'white' ? kPrimaryColor : Colors.white,
+            ),
           ),
         ),
       ),
