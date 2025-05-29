@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/features/checkout/presentation/views/order_confirm_error_view.dart';
+import 'package:fruits_app/features/checkout/presentation/views/order_confirmed_view.dart';
 import 'package:fruits_app/features/order/presentation/widgets/order_tracking/order_tracking_view_body.dart';
 
 void main() {
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const OrderTrackingViewBody(),
+      home: const OrderConfirmErrorView(),
     );
   }
 }

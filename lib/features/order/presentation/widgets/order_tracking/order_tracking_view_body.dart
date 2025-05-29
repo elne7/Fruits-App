@@ -16,6 +16,10 @@ class OrderTrackingViewBody extends StatelessWidget {
         shape: Border(
           bottom: BorderSide(color: Colors.grey.withAlpha(30), width: 3.0),
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new_rounded),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

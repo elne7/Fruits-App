@@ -5,7 +5,7 @@ class CustomNoIconButton extends StatelessWidget {
   const CustomNoIconButton({
     super.key,
     required this.text,
-    required this.bgColor,
+    this.bgColor,
     this.onTap,
   });
 
