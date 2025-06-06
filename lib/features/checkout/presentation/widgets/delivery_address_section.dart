@@ -22,11 +22,12 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
             ),
           ],
         ),
+        const SizedBox(height: 8.0),
         Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(6.0),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(16.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withAlpha(30),
@@ -42,7 +43,10 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
               children: [
                 Text(
                   'Add New Address',
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Spacer(),
                 Icon(Icons.add, color: kPrimaryColor),
@@ -52,10 +56,10 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
         ),
         const SizedBox(height: 8.0),
         Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(16.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withAlpha(30),
@@ -68,6 +72,7 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
@@ -75,7 +80,10 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
                     const SizedBox(width: 8.0),
                     Text(
                       'Address 1',
-                      style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     Spacer(),
                     Icon(Icons.check_circle, color: kPrimaryColor),
@@ -96,7 +104,10 @@ class _DeliveryAddressSectionState extends State<DeliveryAddressSection> {
                   children: [
                     Text(
                       'Room # 1 - Ground Floor, Al Najoum Building, 24 B Street, Dubai - United Arab Emirates',
-                      style: TextStyle(fontSize: 16.0, color: Colors.grey[600]),
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.grey[600],
+                      ),
                     ),
                   ],
                 ),

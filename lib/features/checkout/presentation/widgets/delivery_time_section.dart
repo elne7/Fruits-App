@@ -14,10 +14,10 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(6.0),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(16.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withAlpha(30),
@@ -33,7 +33,10 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
               children: [
                 Text(
                   'Now',
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Spacer(),
                 Radio(
@@ -49,10 +52,10 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
         ),
         const SizedBox(height: 8.0),
         Container(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(16.0),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withAlpha(30),
