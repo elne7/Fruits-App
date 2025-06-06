@@ -57,6 +57,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  dropdown_month_year_selector:
+    dependency: "direct main"
+    description:
+      name: dropdown_month_year_selector
+      sha256: b80eafa06e277f329d259783deaec9d27a53acd1fd29bb1f99fb7eb513c69abf
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.8"
   expansion_tile_list:
     dependency: "direct main"
     description:

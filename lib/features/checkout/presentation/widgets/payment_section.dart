@@ -49,11 +49,20 @@ class _PaymentSectionState extends State<PaymentSection> {
             ],
           ),
           const SizedBox(height: 8.0),
-          CustomPaymentMethod(),
+          CustomPaymentMethod(
+            cardImg: 'assets/imgs/credit.png',
+            paymentMethod: 'Credit Card/Debit Card',
+          ),
           const SizedBox(height: 16.0),
-          CustomPaymentMethod(),
+          CustomPaymentMethod(
+            cardImg: 'assets/imgs/cash.png',
+            paymentMethod: 'Cash of Delivery',
+          ),
           const SizedBox(height: 16.0),
-          CustomPaymentMethod(),
+          CustomPaymentMethod(
+            cardImg: 'assets/imgs/knet.png',
+            paymentMethod: 'Knet',
+          ),
           const SizedBox(height: 16.0),
         ],
       ),

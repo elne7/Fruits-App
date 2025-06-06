@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruits_app/features/checkout/presentation/widgets/calender_dropdown_form.dart';
 
 class DeliveryTimeSection extends StatefulWidget {
   const DeliveryTimeSection({super.key});
@@ -33,10 +34,7 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
               children: [
                 Text(
                   'Now',
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 Spacer(),
                 Radio(
@@ -89,6 +87,7 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
                   ],
                 ),
                 const SizedBox(height: 8.0),
+                CalenderDropdownForm(),
               ],
             ),
           ),

@@ -1,16 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/core/constants/colors.dart';
 
 class CustomPaymentMethod extends StatelessWidget {
-  const CustomPaymentMethod({super.key});
+  const CustomPaymentMethod({
+    super.key,
+    required this.paymentMethod,
+    required this.cardImg,
+  });
+
+  final String paymentMethod;
+  final String cardImg;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(24.0),
+        borderRadius: BorderRadius.circular(20.0),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withAlpha(30),
@@ -22,10 +28,10 @@ class CustomPaymentMethod extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(Icons.payment, color: kPrimaryColor),
+          Image.asset(cardImg, width: 32, height: 32),
           const SizedBox(width: 8.0),
           Text(
-            'Credit Card/Debit Card',
+            paymentMethod,
             style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
           ),
           Spacer(),

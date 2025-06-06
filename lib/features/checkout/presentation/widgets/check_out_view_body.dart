@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/widgets/custom_no_icon_button.dart';
-import 'package:fruits_app/features/checkout/presentation/widgets/payment_section.dart';
-// import 'package:fruits_app/features/checkout/presentation/widgets/delivery_time_section.dart';
+// import 'package:fruits_app/features/checkout/presentation/widgets/payment_section.dart';
+import 'package:fruits_app/features/checkout/presentation/widgets/delivery_time_section.dart';
 // import 'package:fruits_app/features/checkout/presentation/widgets/delivery_address_section.dart';
 
 class CheckOutViewBody extends StatefulWidget {
@@ -20,7 +20,7 @@ class _CheckOutViewBodyState extends State<CheckOutViewBody> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            PaymentSection(),
+            DeliveryTimeSection(),
             SizedBox(height: 16.0),
             CustomNoIconButton(text: 'Continue', bgColor: 'green'),
             const SizedBox(height: 32.0),
