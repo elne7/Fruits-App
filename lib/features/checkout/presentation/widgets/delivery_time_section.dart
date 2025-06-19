@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/features/checkout/presentation/widgets/calender_dropdown_form.dart';
+import 'package:fruits_app/features/checkout/presentation/widgets/checkout_steps_section.dart';
 
 class DeliveryTimeSection extends StatefulWidget {
   const DeliveryTimeSection({super.key});
@@ -14,6 +15,8 @@ class _DeliveryTimeSectionState extends State<DeliveryTimeSection> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
+        CheckoutStepsSection(),
+        const SizedBox(height: 16.0),
         Container(
           padding: const EdgeInsets.all(6.0),
           decoration: BoxDecoration(
