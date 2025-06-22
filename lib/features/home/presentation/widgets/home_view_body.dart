@@ -8,7 +8,7 @@ import 'package:fruits_app/features/home/presentation/widgets/filter_drop_down_m
 import 'package:fruits_app/features/home/presentation/widgets/offers_page_view.dart';
 import 'package:fruits_app/features/home/presentation/widgets/radio_buttons_section.dart';
 import 'package:fruits_app/features/home/presentation/widgets/seller_item.dart';
-import 'package:fruits_app/features/onboarding/presentation/widgets/switch_points.dart';
+import 'package:fruits_app/core/unused/switch_points.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});

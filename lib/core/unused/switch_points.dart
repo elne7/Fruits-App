@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/onboarding/presentation/widgets/not_selected_point.dart';
-import 'package:fruits_app/features/onboarding/presentation/widgets/selected_point.dart';
+import 'package:fruits_app/core/unused/not_selected_point.dart';
+import 'package:fruits_app/core/unused/selected_point.dart';
 
 class SwitchPoints extends StatelessWidget {
   const SwitchPoints({super.key, required this.currentIndex});

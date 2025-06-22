@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
-import 'package:fruits_app/features/onboarding/presentation/widgets/switch_points.dart';
+import 'package:fruits_app/core/unused/switch_points.dart';
 
-class ThirdIntroPage extends StatelessWidget {
-  const ThirdIntroPage({super.key});
+class SecondIntroPage extends StatelessWidget {
+  const SecondIntroPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        actions: [TextButton(onPressed: () {}, child: const Text('Skip'))],
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -15,7 +18,7 @@ class ThirdIntroPage extends StatelessWidget {
           children: [
             Image.asset('assets/imgs/Group 2805.png', fit: BoxFit.scaleDown),
             Text(
-              'Delivery Arrived',
+              'Order is on The Way',
               style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
@@ -23,11 +26,11 @@ class ThirdIntroPage extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             Text(
-              'Order is arrived at your place',
+              'Your order is on the way and will be delivered to you soon',
               style: TextStyle(color: Colors.grey, fontSize: 20),
             ),
             const SizedBox(height: 15),
-            SwitchPoints(currentIndex: 3),
+            SwitchPoints(currentIndex: 2),
             const SizedBox(height: 15),
             SizedBox(
               width: 150,
@@ -40,7 +43,7 @@ class ThirdIntroPage extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'Get Started',
+                  'Next',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),

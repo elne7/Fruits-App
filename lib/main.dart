@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fruits_app/features/checkout/presentation/views/check_out_view.dart';
+import 'package:fruits_app/features/splash_view/presentation/views/splash_view.dart';
+// import 'package:fruits_app/features/checkout/presentation/views/check_out_view.dart';
 // import 'package:fruits_app/features/checkout/presentation/views/order_confirm_error_view.dart';
 // import 'package:fruits_app/features/checkout/presentation/views/order_confirmed_view.dart';
 // import 'package:fruits_app/features/order/presentation/widgets/order_tracking/order_tracking_view_body.dart';
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const CheckOutView(),
+      home: const SplashView(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fruits_app/core/constants/colors.dart';
-import 'package:fruits_app/features/onboarding/presentation/widgets/switch_points.dart';
+import 'package:fruits_app/core/unused/switch_points.dart';
 
 class FirstIntroPage extends StatelessWidget {
   const FirstIntroPage({super.key});
